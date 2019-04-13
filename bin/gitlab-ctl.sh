@@ -9,7 +9,20 @@ else
     option="${1}"
         case ${option} in
            -h)
-              echo "help for shell script"
+              echo "
+                    -h      Help for gitlab-ctl shell script
+
+                    -d      prints out the directory
+
+                    -p      prints the port number that GitLab listens on
+
+                    start   Starts Gitlab Postgress and regres in a docker container
+
+                    stop    Stops gitlab but does not remove the containers
+
+                    destroy Stops gitlab and removes the container    
+
+              "
               exit 0
               ;;
            -d) DIR="/tmp/gitlab-data"
