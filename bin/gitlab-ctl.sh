@@ -16,11 +16,11 @@ else
 
                     -p      prints the port number that GitLab listens on
 
-                    start   Starts Gitlab Postgress and regres in a docker container
+                    start   Starts Gitlab Redis and PostgreSQL in  docker containers
 
                     stop    Stops gitlab but does not remove the containers
 
-                    destroy Stops gitlab and removes the container    
+                    destroy Stops gitlab and removes the container
 
               "
               exit 0
@@ -44,7 +44,11 @@ else
               docker-compose down -d
               ;;
            *)
-              echo "test"
+              echo "
+    Please choose a valid option $option is not a valid argument
+
+    Run the script again with -h to see all the valid arguments
+"
               exit 1 # Command to come out of the program with status 1
               ;;
         esac
